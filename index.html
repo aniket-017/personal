@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aniket Khillare</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Trocchi|Anton"
+      rel="stylesheet"
+    />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+
+    <div id="app">
+      <div :class="['bg', bg]">
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <a class="link-bio" href="#bio" @click="bg = 'bio'">Bio</a>
+              </li>
+              <li>
+                <a
+                  class="link-projects"
+                  href="#projects"
+                  @click="bg = 'projects'"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a class="link-find-me" href="#findme" @click="bg = 'find-me'"
+                  >Find Me</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="transition transition-bio"></div>
+          <div class="transition transition-projects"></div>
+          <div class="transition transition-find-me"></div>
+          <h1>Aniket Khillare</h1>
+        </header>
+        <div class="dots dots1"></div>
+        <div class="dots dots2"></div>
+        <main>
+          <transition name="slide-fade" mode="out-in">
+            <!-- BIO PAGE -->
+            <div key="bio" v-if="bg==='bio'">
+              <h2>Bio Page</h2>
+              <h3>
+                I'm a web developer with in-depth experience in UI/UX design. In
+                a nutshell, I create websites that help organizations address
+                business challenges and meet their needs. I manage everything
+                from website navigation and layout to a company's web hosting
+              </h3>
+            </div>
+            <!-- Project Page -->
+            <div key="projects" v-if="bg==='projects'">
+              <h2>Project Page</h2>
+              <hr />
+
+              <!-- Housing -->
+
+              <h3>Khojo</h3>
+              <section class="carousel" aria-label="Gallery">
+                <ol class="carousel__viewport">
+                  <li
+                    id="carousel__slide1"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper">
+                      <img
+                        class="carousel__snapper"
+                        src="./img/2.jpg"
+                        alt="Girl in a jacket"
+                      />
+                      <a href="#carousel__slide4" class="carousel__prev"
+                        >Go to last slide</a
+                      >
+                      <a href="#carousel__slide2" class="carousel__next"
+                        >Go to next slide</a
+                      >
+                    </div>
+                  </li>
+                  <li
+                    id="carousel__slide2"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper"></div>
+                    <img
+                      class="carousel__snapper"
+                      src="./img/3.jpg"
+                      alt="Girl in a jacket"
+                    />
+                    <a href="#carousel__slide1" class="carousel__prev"
+                      >Go to previous slide</a
+                    >
+                    <a href="#carousel__slide3" class="carousel__next"
+                      >Go to next slide</a
+                    >
+                  </li>
+                  <li
+                    id="carousel__slide3"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper"></div>
+                    <img
+                      class="carousel__snapper"
+                      src="./img/4.jpg"
+                      alt="Girl in a jacket"
+                    />
+                    <a href="#carousel__slide2" class="carousel__prev"
+                      >Go to previous slide</a
+                    >
+                    <a href="#carousel__slide4" class="carousel__next"
+                      >Go to next slide</a
+                    >
+                  </li>
+
+                  <!-- <li
+                    id="carousel__slide4"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper"></div>
+                    <img
+                    class="carousel__snapper"
+                    src="./img/3.jpg"
+                    alt="Girl in a jacket"
+                    
+                  />
+                    <a href="#carousel__slide3" class="carousel__prev"
+                      >Go to previous slide</a
+                    >
+                    <a href="#carousel__slide1" class="carousel__next"
+                      >Go to first slide</a
+                    >
+                  </li> -->
+                </ol>
+                <aside class="carousel__navigation">
+                  <ol class="carousel__navigation-list">
+                    <li class="carousel__navigation-item">
+                      <a
+                        href="#carousel__slide1"
+                        class="carousel__navigation-button"
+                        >Go to slide
+                      </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                      <a
+                        href="#carousel__slide2"
+                        class="carousel__navigation-button"
+                        >Go to slide 2</a
+                      >
+                    </li>
+                    <!-- <li class="carousel__navigation-item">
+                      <a
+                        href="#carousel__slide3"
+                        class="carousel__navigation-button"
+                        >Go to slide 3</a
+                      >
+                    </li>
+                    <li class="carousel__navigation-item">
+                      <a
+                        href="#carousel__slide4"
+                        class="carousel__navigation-button"
+                        >Go to slide 4</a
+                      >
+                    </li> -->
+                  </ol>
+                </aside>
+              </section>
+              <button>Live Preview</button>
+              <hr />
+
+              <!-- Mapbox -->
+              <h3>Travel Map</h3>
+              <section class="carousel" aria-label="Gallery">
+                <ol class="carousel__viewport">
+                  <li
+                    id="carousel__slide1"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper">
+                      <img
+                        class="carousel__snapper"
+                        src="./img/2.jpg"
+                        alt="Girl in a jacket"
+                      />
+                      <a href="#carousel__slide4" class="carousel__prev"
+                        >Go to last slide</a
+                      >
+                      <a href="#carousel__slide2" class="carousel__next"
+                        >Go to next slide</a
+                      >
+                    </div>
+                  </li>
+                  <li
+                    id="carousel__slide2"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper"></div>
+                    <img
+                      class="carousel__snapper"
+                      src="./img/3.jpg"
+                      alt="Girl in a jacket"
+                    />
+                    <a href="#carousel__slide1" class="carousel__prev"
+                      >Go to previous slide</a
+                    >
+                    <a href="#carousel__slide3" class="carousel__next"
+                      >Go to next slide</a
+                    >
+                  </li>
+                  <li
+                    id="carousel__slide3"
+                    tabindex="0"
+                    class="carousel__slide"
+                  >
+                    <div class="carousel__snapper"></div>
+                    <img
+                      class="carousel__snapper"
+                      src="./img/4.jpg"
+                      alt="Girl in a jacket"
+                    />
+                    <a href="#carousel__slide2" class="carousel__prev"
+                      >Go to previous slide</a
+                    >
+                    <a href="#carousel__slide4" class="carousel__next"
+                      >Go to next slide</a
+                    >
+                  </li>
+
+                  <!-- <li
+                      id="carousel__slide4"
+                      tabindex="0"
+                      class="carousel__slide"
+                    >
+                      <div class="carousel__snapper"></div>
+                      <img
+                      class="carousel__snapper"
+                      src="./img/3.jpg"
+                      alt="Girl in a jacket"
+                      
+                    />
+                      <a href="#carousel__slide3" class="carousel__prev"
+                        >Go to previous slide</a
+                      >
+                      <a href="#carousel__slide1" class="carousel__next"
+                        >Go to first slide</a
+                      >
+                    </li> -->
+                </ol>
+                <aside class="carousel__navigation">
+                  <ol class="carousel__navigation-list">
+                    <li class="carousel__navigation-item">
+                      <a
+                        href="#carousel__slide1"
+                        class="carousel__navigation-button"
+                        >Go to slide
+                      </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                      <a
+                        href="#carousel__slide2"
+                        class="carousel__navigation-button"
+                        >Go to slide 2</a
+                      >
+                    </li>
+                    <!-- <li class="carousel__navigation-item">
+                        <a
+                          href="#carousel__slide3"
+                          class="carousel__navigation-button"
+                          >Go to slide 3</a
+                        >
+                      </li>
+                      <li class="carousel__navigation-item">
+                        <a
+                          href="#carousel__slide4"
+                          class="carousel__navigation-button"
+                          >Go to slide 4</a
+                        >
+                      </li> -->
+                  </ol>
+                </aside>
+              </section>
+              <button>Live Preview</button>
+              <hr />
+
+              <transition name="slide-fade" mode="out-in" data-aos="zoom-in">
+                <div class="card">
+                  <div class="content">Aniket</div>
+                  <div class="image">
+                    <img
+                      src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/11/attachment_88813488-e1572534840369.png?auto=format&q=60&fit=max&w=930"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </transition>
+              <hr />
+              <transition name="slide-fade" mode="out-in" data-aos="zoom-in">
+                <div class="card">
+                  <div class="content">Aniket</div>
+                  <div class="image">
+                    <img
+                      class="card-img"
+                      src="./img/4.jpg"
+                      alt="Girl in a jacket"
+                    />
+                  </div>
+                </div>
+              </transition>
+              <hr />
+              <transition name="slide-fade" mode="out-in" data-aos="zoom-in">
+                <div class="card">
+                  <div class="content">Aniket</div>
+                  <div class="image">Khillare</div>
+                </div>
+              </transition>
+              <hr />
+
+              <div>
+                <div>
+                  <h4>Top and Bottom</h4>
+                  <b-card-group deck>
+                    <b-card
+                      img-src="https://placekitten.com/1000/300"
+                      img-alt="Card image"
+                      img-top
+                    >
+                      <b-card-text>
+                        Some quick example text to build on the card and make up
+                        the bulk of the card's content.
+                      </b-card-text>
+                    </b-card>
+
+                    <b-card
+                      img-src="https://placekitten.com/1000/300"
+                      img-alt="Card image"
+                      img-bottom
+                    >
+                      <b-card-text>
+                        Some quick example text to build on the card and make up
+                        the bulk of the card's content.
+                      </b-card-text>
+                    </b-card>
+                  </b-card-group>
+                </div>
+                <div class="mt-4">
+                  <h4>Left and Right (or Start and End)</h4>
+                  <b-card
+                    img-src="https://placekitten.com/300/300"
+                    img-alt="Card image"
+                    img-left
+                    class="mb-3"
+                  >
+                    <b-card-text>
+                      Some quick example text to build on the card and make up
+                      the bulk of the card's content.
+                    </b-card-text>
+                  </b-card>
+
+                  <b-card
+                    img-src="https://placekitten.com/300/300"
+                    img-alt="Card image"
+                    img-right
+                  >
+                    <b-card-text>
+                      Some quick example text to build on the card and make up
+                      the bulk of the card's content.
+                    </b-card-text>
+                  </b-card>
+                </div>
+              </div>
+
+              <div class="item" data-aos="fade-up">1</div>
+            </div>
+            <!-- Find Me Page -->
+            <div key="find-me" v-if="bg==='find-me'">Find Me Page</div>
+
+            <!-- <p key="bio" v-if="bg==='bio'">Hi! I'm a bio page.</p>
+        <p key="projects" v-if="bg==='projects'">This is a projects page.</p>
+        <p key="find-me" v-if="bg==='find-me'">See <a href="https://pehaa.com" target="_blank" rel="noopener">pehaa.com</a> for the complete website (built with Nuxt.js).</p> -->
+          </transition>
+        </main>
+      </div>
+    </div>
+    <!-- partial -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
